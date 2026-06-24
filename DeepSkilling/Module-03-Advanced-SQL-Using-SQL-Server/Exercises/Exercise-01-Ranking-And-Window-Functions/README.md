@@ -2,22 +2,38 @@
 
 ## Objective
 
-Use SQL Server Window Functions to rank products within categories based on price.
+Use SQL Server Window Functions to rank products within categories.
+
+## Goal
+
+Use ROW_NUMBER(), RANK(), DENSE_RANK(), OVER(), and PARTITION BY.
 
 ## Scenario
 
-An online retail store maintains product information across multiple categories.
+Find the top 3 most expensive products in each category using different ranking functions.
 
-The goal is to identify the top expensive products within each category and understand the behavior of different ranking functions.
+## Steps
+
+1. Use ROW_NUMBER() to assign a unique rank within each category.
+2. Use RANK() and DENSE_RANK() to compare how ties are handled.
+3. Use PARTITION BY Category and ORDER BY Price DESC.
 
 ## Concepts Used
 
-- OVER()
-- PARTITION BY
-- ROW_NUMBER()
-- RANK()
-- DENSE_RANK()
+* ROW_NUMBER()
+* RANK()
+* DENSE_RANK()
+* OVER()
+* PARTITION BY
+
+## Observation
+
+The ranking functions successfully assigned ranks to products within each category. ROW_NUMBER() generated unique rankings, while RANK() and DENSE_RANK() handled tied values differently.
 
 ## Learning Outcome
 
-After completing this exercise, I understood how SQL window functions perform ranking operations and how ties are handled differently by each ranking function.
+Learned how to use ROW_NUMBER(), RANK(), DENSE_RANK(), OVER(), and PARTITION BY to perform ranking and analytical operations on grouped data.
+
+## Conclusion
+
+This exercise provided practical experience in applying SQL Server Window Functions for ranking and reporting operations in an online retail environment.
